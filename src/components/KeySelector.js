@@ -19,6 +19,7 @@ const KeySelector = ({ note }) => {
     <div>
       <button value={note} onClick={handleClick}>
         {note}
+        {user.name}
       </button>
     </div>
   );
