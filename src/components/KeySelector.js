@@ -5,12 +5,12 @@ import functions from '../helper/utils';
 
 const handleClick = e => {
   e.preventDefault();
-  functions.getMajorScale(e.target.value);
-  functions.getDorianScale(e.target.value);
-  functions.getPhrygianScale(e.target.value);
   functions.getLydianScale(e.target.value);
+  functions.getMajorScale(e.target.value);
   functions.getMixolydianScale(e.target.value);
+  functions.getDorianScale(e.target.value);
   functions.getMinorScale(e.target.value);
+  functions.getPhrygianScale(e.target.value);
   functions.getLocrianScale(e.target.value);
 };
 
@@ -19,7 +19,6 @@ const KeySelector = ({ note }) => {
     <div>
       <button value={note} onClick={handleClick}>
         {note}
-        {user.name}
       </button>
     </div>
   );

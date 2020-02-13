@@ -63,7 +63,7 @@ const getDorianScale = endNote => {
 
 const getPhrygianScale = endNote => {
   const newScale = shiftForMode('Phrygian');
-  if (endNote === '♭' || endNote.includes('♯')) {
+  if (endNote === 'B' || endNote.includes('♯')) {
     while (newScale[0] !== endNote) {
       shiftArray(newScale, false);
       addPhrygianAccent(newScale, false);
@@ -114,7 +114,7 @@ const getMixolydianScale = endNote => {
 
 const getMinorScale = endNote => {
   const newScale = shiftForMode('Minor');
-  if (endNote === 'E' || endNote === '♭' || endNote.includes('♯')) {
+  if (endNote === 'E' || endNote === 'B' || endNote.includes('♯')) {
     // take sharp route
     while (newScale[0] !== endNote) {
       shiftArray(newScale, false);
