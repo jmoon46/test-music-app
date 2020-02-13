@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import KeySelector from './KeySelector';
 import KeyModifier from './KeyModifier';
+import KeySigContext from './KeySigContext';
 
 const Nav = () => {
-  const [currentNote, setCurrentNote] = useState("C");
-  const [currentModifier, setCurrentModifier] = useState("♮")
+  const {
+    currentNote,
+    setCurrentNote,
+    currentModifier,
+    setCurrentModifier
+  } = useContext(KeySigContext);
 
   const notes = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
   const symbols = ['♮', '♭', '♯'];
@@ -15,13 +20,13 @@ const Nav = () => {
     <KeyModifier symbol={symbol} key={index} />
   ));
 
-  const handleNoteClick = (e) => {
+  const handleNoteClick = e => {
     setCurrentNote(e.target.value);
-  }
+  };
 
-  const handleModifierClick = (e) => {
+  const handleModifierClick = e => {
     setCurrentModifier(e.target.value);
-  }
+  };
 
   return (
     <div className="nav">
