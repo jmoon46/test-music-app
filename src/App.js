@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './App.css';
 import Nav from './components/Nav';
 import KeySigContext from './components/KeySigContext';
-import Scale from './components/Scale';
 import ScaleWrapper from './components/ScaleWrapper';
 
 function App() {
