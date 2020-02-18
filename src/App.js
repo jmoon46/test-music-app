@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './App.css';
 import Nav from './components/Nav';
 import KeySigContext from './components/KeySigContext';
+import Scale from './components/Scale';
+import ScaleWrapper from './components/ScaleWrapper';
 
 function App() {
   const [currentNote, setCurrentNote] = useState('C');
@@ -18,6 +20,7 @@ function App() {
       >
         <h1>Music App</h1>
         <Nav />
+        <ScaleWrapper />
       </KeySigContext.Provider>
     </div>
   );
