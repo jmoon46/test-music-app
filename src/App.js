@@ -6,7 +6,7 @@ import ScaleWrapper from './components/ScaleWrapper';
 
 function App() {
   const [currentNote, setCurrentNote] = useState('C');
-  const [currentModifier, setCurrentModifier] = useState('♮');
+  const [currentModifier, setCurrentModifier] = useState('');
   return (
     <div className="App">
       <KeySigContext.Provider
