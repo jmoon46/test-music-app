@@ -16,10 +16,16 @@ const Nav = () => {
   ));
 
   const handleNoteClick = e => {
+    if (e.target.value === undefined) {
+      return
+    }
     setCurrentNote(e.target.value);
   };
 
   const handleModifierClick = e => {
+    if (e.target.value === undefined) {
+      return
+    }
     setCurrentModifier(e.target.value);
   };
 
