@@ -29,10 +29,11 @@ const Scale = ({ mode }) => {
   } else if (mode === 'Locrian') {
     scaleNotes = functions.getLocrianScale(finalNote);
   }
+
   const notes = scaleNotes.map((note, index) => (
     <Note note={note} key={index} />
   ));
-  return <div>{notes}</div>;
+  return <div className='scale-notes-wrapper'>{notes}</div>;
 };
 
 export default Scale;

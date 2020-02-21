@@ -6,8 +6,8 @@ import React from 'react';
 
 const KeyModifier = ({ symbol }) => {
   return (
-    <div>
-      <button value={symbol}>{symbol}</button>
+    <div className='key-modifier'>
+      <button className="key-button" value={symbol}>{symbol}</button>
     </div>
   );
 };

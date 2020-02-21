@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 const KeySelector = ({ note }) => {
   return (
-    <div>
-      <button value={note}>
+    <div className='key-selector'>
+      <button className="key-button" value={note}>
         {note}
       </button>
     </div>
