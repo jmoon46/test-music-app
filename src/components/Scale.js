@@ -14,6 +14,18 @@ const Scale = ({ mode }) => {
   }
 
   let scaleNotes;
+  // let romanNumerals = ['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii']
+
+  // const createRomanNumerals = (mode) => {
+  //   if (mode === 'Lydian') {
+  //     const finalNumerals = romanNumerals.map((numeral, index) {
+  //       if (index === 0 || index === 3 || index === 4) {
+  //         numeral.toUpperCase
+  //       }
+  //     })
+  //   }
+  // }
+
   if (mode === 'Lydian') {
     scaleNotes = functions.getLydianScale(finalNote);
   } else if (mode === 'Major') {
@@ -30,7 +42,7 @@ const Scale = ({ mode }) => {
     scaleNotes = functions.getLocrianScale(finalNote);
   }
 
-  const notes = scaleNotes.map((note, index) => (
+  const notes = scaleNotes.scale.map((note, index) => (
     <Note note={note} key={index} />
   ));
   return <div className='scale-notes-wrapper'>{notes}</div>;
