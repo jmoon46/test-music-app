@@ -1,45 +1,62 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 * {
-    font-family: 'Roboto', arial, 'sans-serif';
+  font-family: 'Roboto', arial, 'sans-serif';
 }
 
 .key-selector {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    margin: 0 5px 0 5px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0 5px 0 5px;
 }
 
 .key-modifier {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    margin: 5px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
 }
 
 .key-button {
-    height: 100%;
-    width: 100%;
-    border: none;
-    background-color: #c4f1ff;
-    border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  border: none;
+  background-color: #c4f1ff;
+  border-radius: 50%;
 }
 
 .key-button:hover {
-    background-color: #2f6e9c;
-    color: white;
+  background-color: #2f6e9c;
+  color: white;
 }
 
 .key-button:focus {
-    outline: none;
+  outline: none;
 }
 
-.scale-notes-wrapper {
-    border-bottom: solid black 1px;
+.modes-wrapper {
+  border-bottom: solid black 1px;
+  height: 50px;
+  display: flex;
 }
 
 .scale-note {
-    display: inline;
-    margin-right: 10px;
+  display: inline;
+  margin-right: 10px;
+}
+
+.scale-notes {
+  height: 100%;
+}
+
+.mode-name {
+  height: 100%;
+  display: inline-block;
+  min-width: 100px;
+}
+
+.note-wrapper {
+  display: inline-block;
+  width: 50px;
 }
