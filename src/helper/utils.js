@@ -35,7 +35,12 @@ const getMajorScale = endNote => {
     }
   }
   console.log(newScale);
-  return newScale;
+
+  const modeData = {
+    scale: newScale,
+    numerals: ['I', 'ii', 'iii', 'IV', 'V', 'vi', 'vii']
+  }
+  return modeData;
 };
 
 const getDorianScale = endNote => {
@@ -57,8 +62,11 @@ const getDorianScale = endNote => {
       addDorianAccent(newScale, false);
     }
   }
-  console.log(newScale);
-  return newScale;
+  const modeData = {
+    scale: newScale,
+    numerals: ['i', 'ii', 'III', 'IV', 'v', 'vi', 'VII']
+  }
+  return modeData;
 };
 
 const getPhrygianScale = endNote => {
@@ -74,8 +82,11 @@ const getPhrygianScale = endNote => {
       addPhrygianAccent(newScale, true);
     }
   }
-  console.log(newScale);
-  return newScale;
+  const modeData = {
+    scale: newScale,
+    numerals: ['i', 'II', 'III', 'iv', 'v', 'VI', 'vii']
+  }
+  return modeData;
 };
 
 const getLydianScale = endNote => {
@@ -91,8 +102,11 @@ const getLydianScale = endNote => {
       addLydianAccent(newScale, false);
     }
   }
-  console.log(newScale);
-  return newScale;
+  const modeData = {
+    scale: newScale,
+    numerals: ['I', 'II', 'iii', 'iv', 'V', 'vi', 'vii']
+  }
+  return modeData;
 };
 
 const getMixolydianScale = endNote => {
@@ -108,8 +122,11 @@ const getMixolydianScale = endNote => {
       addMixolydianAccent(newScale, false);
     }
   }
-  console.log(newScale);
-  return newScale;
+  const modeData = {
+    scale: newScale,
+    numerals: ['I', 'ii', 'iii', 'IV', 'v', 'vi', 'VII']
+  }
+  return modeData;
 };
 
 const getMinorScale = endNote => {
@@ -127,8 +144,11 @@ const getMinorScale = endNote => {
       addMinorAccent(newScale, true);
     }
   }
-  console.log(newScale);
-  return newScale;
+  const modeData = {
+    scale: newScale,
+    numerals: ['i', 'ii', 'III', 'iv', 'v', 'VI', 'VII']
+  }
+  return modeData;
 };
 
 const getLocrianScale = endNote => {
@@ -144,8 +164,11 @@ const getLocrianScale = endNote => {
       addLocrianAccent(newScale, true);
     }
   }
-  console.log(newScale);
-  return newScale;
+  const modeData = {
+    scale: newScale,
+    numerals: ['i', 'II', 'iii', 'iv', 'V', 'VI', 'vii']
+  }
+  return modeData;
 };
 
 const shiftArray = (array, flatStatus) => {
