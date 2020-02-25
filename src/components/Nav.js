@@ -17,22 +17,29 @@ const Nav = () => {
 
   const handleNoteClick = e => {
     if (e.target.value === undefined) {
-      return
+      return;
     }
     setCurrentNote(e.target.value);
   };
 
   const handleModifierClick = e => {
     if (e.target.value === undefined) {
-      return
+      return;
     }
     setCurrentModifier(e.target.value);
   };
 
   return (
     <div className="nav">
-      <div className="key-buttons-wrapper" onClick={handleNoteClick}>{keyNote}</div>
-      <div className="key-buttons-wrapper modifier-buttons-wrapper" onClick={handleModifierClick}>{keyModifier}</div>
+      <div className="key-buttons-wrapper" onClick={handleNoteClick}>
+        {keyNote}
+      </div>
+      <div
+        className="key-buttons-wrapper modifier-buttons-wrapper"
+        onClick={handleModifierClick}
+      >
+        {keyModifier}
+      </div>
     </div>
   );
 };

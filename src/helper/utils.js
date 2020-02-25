@@ -38,8 +38,8 @@ const getMajorScale = endNote => {
 
   const modeData = {
     scale: newScale,
-    numerals: ['I', 'ii', 'iii', 'IV', 'V', 'vi', 'vii']
-  }
+    numerals: ['I', 'ii', 'iii', 'IV', 'V', 'vi', 'vii°']
+  };
   return modeData;
 };
 
@@ -64,8 +64,8 @@ const getDorianScale = endNote => {
   }
   const modeData = {
     scale: newScale,
-    numerals: ['i', 'ii', 'III', 'IV', 'v', 'vi', 'VII']
-  }
+    numerals: ['i', 'ii', 'III', 'IV', 'v', 'vi°', 'VII']
+  };
   return modeData;
 };
 
@@ -84,8 +84,8 @@ const getPhrygianScale = endNote => {
   }
   const modeData = {
     scale: newScale,
-    numerals: ['i', 'II', 'III', 'iv', 'v', 'VI', 'vii']
-  }
+    numerals: ['i', 'II', 'III', 'iv', 'v°', 'VI', 'vii']
+  };
   return modeData;
 };
 
@@ -104,8 +104,8 @@ const getLydianScale = endNote => {
   }
   const modeData = {
     scale: newScale,
-    numerals: ['I', 'II', 'iii', 'iv', 'V', 'vi', 'vii']
-  }
+    numerals: ['I', 'II', 'iii', 'iv°', 'V', 'vi', 'vii']
+  };
   return modeData;
 };
 
@@ -124,8 +124,8 @@ const getMixolydianScale = endNote => {
   }
   const modeData = {
     scale: newScale,
-    numerals: ['I', 'ii', 'iii', 'IV', 'v', 'vi', 'VII']
-  }
+    numerals: ['I', 'ii', 'iii°', 'IV', 'v', 'vi', 'VII']
+  };
   return modeData;
 };
 
@@ -146,8 +146,8 @@ const getMinorScale = endNote => {
   }
   const modeData = {
     scale: newScale,
-    numerals: ['i', 'ii', 'III', 'iv', 'v', 'VI', 'VII']
-  }
+    numerals: ['i', 'ii°', 'III', 'iv', 'v', 'VI', 'VII']
+  };
   return modeData;
 };
 
@@ -166,8 +166,8 @@ const getLocrianScale = endNote => {
   }
   const modeData = {
     scale: newScale,
-    numerals: ['i', 'II', 'iii', 'iv', 'V', 'VI', 'vii']
-  }
+    numerals: ['i°', 'II', 'iii', 'iv', 'V', 'VI', 'vii']
+  };
   return modeData;
 };
 
