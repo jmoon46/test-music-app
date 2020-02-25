@@ -1,20 +1,54 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+
 
 * {
   font-family: 'Roboto', arial, 'sans-serif';
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  color: #f7efd8;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(21, 7, 0);
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  max-width: 1000px;
+  border-radius: 5px;
+  margin: 10px auto;
+  padding: 25px;
+  background-color: #330a0a;
+}
+
+.key-buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 400px;
+  flex-wrap: wrap;
+}
+
+.modifier-buttons-wrapper {
+  width: 200px;
 }
 
 .key-selector {
   display: inline-block;
-  width: 50px;
-  height: 50px;
+  width: 75px;
+  height: 75px;
   margin: 0 5px 0 5px;
 }
 
 .key-modifier {
   display: inline-block;
-  width: 50px;
-  height: 50px;
+  width: 75px;
+  height: 75px;
   margin: 5px;
 }
 
@@ -22,12 +56,13 @@
   height: 100%;
   width: 100%;
   border: none;
-  background-color: #c4f1ff;
+  background-color: #f7efd8;
   border-radius: 50%;
+  font-size: 1.3em;
 }
 
 .key-button:hover {
-  background-color: #2f6e9c;
+  background-color: #583b2d;
   color: white;
 }
 
@@ -35,28 +70,69 @@
   outline: none;
 }
 
+.scales-wrapper {
+  border-radius: 5px;
+  padding: 10px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #583b2d;
+  color: black;
+}
+
 .modes-wrapper {
-  border-bottom: solid black 1px;
-  height: 50px;
+  margin: 10px;
+  height: 90px;
   display: flex;
+  justify-content: center;
+  font-size: 1.7em;
 }
 
 .scale-note {
   display: inline;
-  margin-right: 10px;
 }
 
 .scale-notes {
+  border-radius: 3px;
+  background-color: #f7efd8;
+  display: flex;
+  align-items: center;
   height: 100%;
 }
 
 .mode-name {
-  height: 100%;
-  display: inline-block;
-  min-width: 100px;
+  background-color: #d4a284;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  margin: 10px;
+  border-radius: 3px;
+  overflow: hidden;
 }
 
 .note-wrapper {
-  display: inline-block;
-  width: 50px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 75px;
+  text-align: center;
+}
+
+.numeral {
+  font-family: 'Roboto Slab', serif;
+  width: 100%;
+  height: 30px;
+  font-size: 0.7em;
+}
+
+.scale-note {
+  width: 100%;
+  font-size: 1.1em;
+}
+
+.footer {
+  background-color: #330a0a;
+  margin-top: 75px;
+  height: 50px;
+  width: 100%;
 }

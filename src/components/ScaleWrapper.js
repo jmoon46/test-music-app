@@ -13,7 +13,7 @@ const ScaleWrapper = () => {
   ];
 
   const scales = modes.map((mode, index) => <Scale mode={mode} key={index} />);
-  return <div>{scales}</div>;
+  return <div className='scales-wrapper'>{scales}</div>;
 };
 
 export default ScaleWrapper;

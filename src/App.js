@@ -17,10 +17,11 @@ function App() {
           setCurrentModifier
         }}
       >
-        <h1>Music App</h1>
+        <h1>Modal Interchange</h1>
         <Nav />
         <ScaleWrapper />
       </KeySigContext.Provider>
+      <div className="footer"></div>
     </div>
   );
 }
