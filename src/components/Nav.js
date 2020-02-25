@@ -31,8 +31,8 @@ const Nav = () => {
 
   return (
     <div className="nav">
-      <div onClick={handleNoteClick}>{keyNote}</div>
-      <div onClick={handleModifierClick}>{keyModifier}</div>
+      <div className="key-buttons-wrapper" onClick={handleNoteClick}>{keyNote}</div>
+      <div className="key-buttons-wrapper modifier-buttons-wrapper" onClick={handleModifierClick}>{keyModifier}</div>
     </div>
   );
 };
