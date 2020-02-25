@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
 
-
 * {
   font-family: 'Roboto', arial, 'sans-serif';
   box-sizing: border-box;
@@ -25,6 +24,13 @@ body {
   margin: 10px auto;
   padding: 25px;
   background-color: #330a0a;
+  background: rgb(51, 10, 10);
+  background: linear-gradient(
+    90deg,
+    rgba(51, 10, 10, 1) 0%,
+    rgb(80, 22, 22) 50%,
+    rgba(51, 10, 10, 1) 100%
+  );
 }
 
 .key-buttons-wrapper {
@@ -77,6 +83,13 @@ body {
   margin: 0 auto;
   background-color: #583b2d;
   color: black;
+  background: rgb(71, 44, 32);
+  background: linear-gradient(
+    90deg,
+    rgba(71, 44, 32, 1) 0%,
+    rgba(120, 71, 48, 1) 50%,
+    rgba(71, 44, 32, 1) 100%
+  );
 }
 
 .modes-wrapper {

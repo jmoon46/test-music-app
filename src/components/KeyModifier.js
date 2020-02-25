@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import KeySigContext from './KeySigContext';
 
-// notes and modifiers(sharps/flats) need to be toggleable. When you click a
-// note or a modifier it will run the logic that will check what is toggled on
-// and run all of the getScale methods off of the note and modifier combined
+const selectedStyle = {
+  backgroundColor: '#583b2d',
+  color: 'white'
+};
 
 const KeyModifier = ({ symbol }) => {
+  const { currentModifier } = useContext(KeySigContext);
   return (
-    <div className='key-modifier'>
-      <button className="key-button" value={symbol}>{symbol}</button>
+    <div className="key-modifier">
+      <button
+        className="key-button"
+        style={currentModifier === symbol ? selectedStyle : null}
+        value={symbol}
+      >
+        {symbol}
+      </button>
     </div>
   );
 };
