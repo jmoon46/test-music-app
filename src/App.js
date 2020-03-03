@@ -21,6 +21,7 @@ function App() {
         <Nav />
         <ScaleWrapper />
       </KeySigContext.Provider>
+      <div className="pre-footer"></div>
       <div className="footer"></div>
     </div>
   );

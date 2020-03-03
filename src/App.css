@@ -113,7 +113,7 @@ body {
 }
 
 .mode-name {
-  background-color: #d4a284;
+  background-color: #f5a270;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -148,4 +148,39 @@ body {
   margin-top: 75px;
   height: 50px;
   width: 100%;
+}
+
+@media (max-width: 860px) {
+  .nav {
+    border-radius: 0px;
+    margin: 0px auto;
+  }
+
+  .scales-wrapper {
+    flex-direction: column;
+  }
+
+  .modes-wrapper {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .mode-name {
+    min-width: 525px;
+    margin: 0 auto 10px auto;
+  }
+
+  .key-selector {
+    margin-bottom: 10px;
+  }
+
+  .scales-wrapper {
+    border-radius: 0;
+  }
+
+  .scale-notes {
+    justify-content: center;
+    max-width: 650px;
+    margin: 0 auto;
+  }
 }
