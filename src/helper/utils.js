@@ -21,7 +21,7 @@ const shiftForMode = mode => {
 
 const getMajorScale = endNote => {
   const newScale = [...initNotes];
-  if (endNote === 'F' || endNote.includes('♭')) {
+  if (endNote === 'F' || endNote.includes('b')) {
     // take flat route
     while (newScale[0] !== endNote) {
       shiftArray(newScale, true);
@@ -50,7 +50,7 @@ const getDorianScale = endNote => {
     endNote === 'G' ||
     endNote === 'C' ||
     endNote === 'F' ||
-    endNote.includes('♭')
+    endNote.includes('b')
   ) {
     while (newScale[0] !== endNote) {
       shiftArray(newScale, true);
@@ -71,7 +71,7 @@ const getDorianScale = endNote => {
 
 const getPhrygianScale = endNote => {
   const newScale = shiftForMode('Phrygian');
-  if (endNote === 'B' || endNote.includes('♯')) {
+  if (endNote === 'B' || endNote.includes('#')) {
     while (newScale[0] !== endNote) {
       shiftArray(newScale, false);
       addPhrygianAccent(newScale, false);
@@ -91,7 +91,7 @@ const getPhrygianScale = endNote => {
 
 const getLydianScale = endNote => {
   const newScale = shiftForMode('Lydian');
-  if (endNote.includes('♭')) {
+  if (endNote.includes('b')) {
     while (newScale[0] !== endNote) {
       shiftArray(newScale, true);
       addLydianAccent(newScale, true);
@@ -111,7 +111,7 @@ const getLydianScale = endNote => {
 
 const getMixolydianScale = endNote => {
   const newScale = shiftForMode('Mixolydian');
-  if (endNote === 'C' || endNote === 'F' || endNote.includes('♭')) {
+  if (endNote === 'C' || endNote === 'F' || endNote.includes('b')) {
     while (newScale[0] !== endNote) {
       shiftArray(newScale, true);
       addMixolydianAccent(newScale, true);
@@ -131,7 +131,7 @@ const getMixolydianScale = endNote => {
 
 const getMinorScale = endNote => {
   const newScale = shiftForMode('Minor');
-  if (endNote === 'E' || endNote === 'B' || endNote.includes('♯')) {
+  if (endNote === 'E' || endNote === 'B' || endNote.includes('#')) {
     // take sharp route
     while (newScale[0] !== endNote) {
       shiftArray(newScale, false);
@@ -153,7 +153,7 @@ const getMinorScale = endNote => {
 
 const getLocrianScale = endNote => {
   const newScale = shiftForMode('Locrian');
-  if (endNote.includes('♯')) {
+  if (endNote.includes('#')) {
     while (newScale[0] !== endNote) {
       shiftArray(newScale, false);
       addLocrianAccent(newScale, false);
@@ -190,58 +190,58 @@ const shiftArray = (array, flatStatus) => {
 // Adds flat or sharp symbol
 const addMajorAccent = (scale, flatStatus) => {
   if (flatStatus === true) {
-    scale[3] += '♭';
+    scale[3] += 'b';
     return;
   }
-  scale[6] += '♯';
+  scale[6] += '#';
 };
 
 const addDorianAccent = (scale, flatStatus) => {
   if (flatStatus === true) {
-    scale[2] += '♭';
+    scale[2] += 'b';
     return;
   }
-  scale[5] += '♯';
+  scale[5] += '#';
 };
 
 const addPhrygianAccent = (scale, flatStatus) => {
   if (flatStatus === false) {
-    scale[4] += '♯';
+    scale[4] += '#';
     return;
   }
-  scale[1] += '♭';
+  scale[1] += 'b';
 };
 
 const addLydianAccent = (scale, flatStatus) => {
   if (flatStatus === true) {
-    scale[0] += '♭';
+    scale[0] += 'b';
     return;
   }
-  scale[3] += '♯';
+  scale[3] += '#';
 };
 
 const addMixolydianAccent = (scale, flatStatus) => {
   if (flatStatus === true) {
-    scale[6] += '♭';
+    scale[6] += 'b';
     return;
   }
-  scale[2] += '♯';
+  scale[2] += '#';
 };
 
 const addMinorAccent = (scale, flatStatus) => {
   if (flatStatus === true) {
-    scale[5] += '♭';
+    scale[5] += 'b';
     return;
   }
-  scale[1] += '♯';
+  scale[1] += '#';
 };
 
 const addLocrianAccent = (scale, flatStatus) => {
   if (flatStatus === false) {
-    scale[0] += '♯';
+    scale[0] += '#';
     return;
   }
-  scale[4] += '♭';
+  scale[4] += 'b';
 };
 
 const functions = {

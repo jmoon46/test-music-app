@@ -7,7 +7,7 @@ const Nav = () => {
   const { setCurrentNote, setCurrentModifier } = useContext(KeySigContext);
 
   const notes = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
-  const symbols = ['♮', '♭', '♯'];
+  const symbols = ['♮', 'b', '#'];
   const keyNote = notes.map((note, index) => (
     <KeySelector note={note} key={index} />
   ));
