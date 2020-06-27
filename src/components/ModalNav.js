@@ -3,7 +3,7 @@ import KeySelector from './KeySelector';
 import KeyModifier from './KeyModifier';
 import KeySigContext from './KeySigContext';
 
-const Nav = () => {
+const ModalNav = () => {
   const { setCurrentNote, setCurrentModifier } = useContext(KeySigContext);
 
   const notes = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
@@ -44,4 +44,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default ModalNav;
