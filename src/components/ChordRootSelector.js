@@ -2,9 +2,19 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import ChordContext from './ChordContext';
 
-const ChordRootSelector = () => {
+const selectedStyle = {
+    backgroundColor: '#583b2d',
+    color: 'white'
+};
+
+const ChordRootSelector = ({ note }) => {
+    const { currentChordNote } = useContext(ChordContext);
     return (
-        <div>here goes chord root buttons</div>
+        <div className="key-selector">
+            <button className="key-button" style={currentChordNote === note ? selectedStyle : null} value={note}>
+                {note}
+            </button>
+        </div>
     )
 };
 

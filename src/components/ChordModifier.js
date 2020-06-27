@@ -1,9 +1,19 @@
 import React, { useContext } from 'react';
 import ChordContext from './ChordContext';
 
-const ChordModifier = () => {
+const selectedStyle = {
+    backgroundColor: '#583b2d',
+    color: 'white'
+};
+
+const ChordModifier = ({ modifier }) => {
+    const { currentChordModifier } = useContext(ChordContext);
     return (
-        <div>here goes the chord modifiers (sus2, maj7, etc)</div>
+        <div className="key-modifier">
+            <button className="key-button" style={currentChordModifier === modifier ? selectedStyle : null} value={modifier}>
+                {modifier}
+            </button>
+        </div>
     )
 }
 

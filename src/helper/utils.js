@@ -131,6 +131,7 @@ const getMixolydianScale = endNote => {
 
 const getMinorScale = endNote => {
   const newScale = shiftForMode('Minor');
+  debugger
   if (endNote === 'E' || endNote === 'B' || endNote.includes('#')) {
     // take sharp route
     while (newScale[0] !== endNote) {

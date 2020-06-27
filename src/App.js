@@ -11,6 +11,10 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 function App() {
   const [currentNote, setCurrentNote] = useState('C');
   const [currentModifier, setCurrentModifier] = useState('♮');
+
+  const [currentChordNote, setCurrentChordNote] = useState('C');
+  const [currentChordModifier, setCurrentChordModifier] = useState('maj');
+
   return (
     <div className="App">
       
@@ -27,26 +31,32 @@ function App() {
           </nav>
 
           <Switch>
-            <ChordContext.Provider>
-              <KeySigContext.Provider
-                value={{
-                  currentNote,
-                  setCurrentNote,
-                  currentModifier,
-                  setCurrentModifier
-                }}>
-                <Route exact path="/">
-                  <h1>Modal Interchange</h1>
-                  <ModalNav />
-                  <ScaleWrapper />
-                </Route>
-              </KeySigContext.Provider>
+            <ChordContext.Provider
+              value = {{
+                currentChordNote,
+                setCurrentChordNote,
+                currentChordModifier,
+                setCurrentChordModifier
+              }}>
               <Route exact path="/chord-generator">
                 <h1>Chord Generator</h1>
                 <ChordsNav />
                 <ChordsWrapper />
               </Route>
             </ChordContext.Provider>
+            <KeySigContext.Provider
+              value={{
+                currentNote,
+                setCurrentNote,
+                currentModifier,
+                setCurrentModifier
+              }}>
+              <Route exact path="/">
+                <h1>Modal Interchange</h1>
+                <ModalNav />
+                <ScaleWrapper />
+              </Route>
+            </KeySigContext.Provider>
           </Switch>
         </Router>
       <div className="pre-footer"></div>
