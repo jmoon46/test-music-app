@@ -43,5 +43,10 @@ html, body {
 }
 
 .active-note {
+    display: flex;
+    flex-direction: column-reverse;
     background-color: #01c5e4;
+    padding-bottom: 40px;
+    font-size: 1.4em;
+    text-align: center;
 }
