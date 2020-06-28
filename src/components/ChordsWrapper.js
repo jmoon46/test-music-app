@@ -1,7 +1,8 @@
 import React, { useEffect, useContext } from 'react';
 import ChordContext from "./ChordContext";
 import "../piano.css";
-import chordFunctions from "../helper/chords.js";
+import chordFunctions from "../helper/chords";
+import plotChordNotes from "../helper/plotChordNotes"
 
 
 const ChordsWrapper = () => {
@@ -41,18 +42,18 @@ const ChordsWrapper = () => {
     useEffect(() => {
         getCurrentChord(currentChordNote, currentChordModifier);
 
-        const plotChordNotes = (note1, note2, note3, note4 = null) => {
-            const a = document.querySelector(".main-container");
-            for (let i = 0; i < a.children.length; i++) {
-                if (a.children[i].classList.contains(note1) || a.children[i].classList.contains(note2) || a.children[i].classList.contains(note3) || a.children[i].classList.contains(note4)) {
-                 a.children[i].classList.add("active-note");
-                } else {
-                 a.children[i].classList.remove("active-note");
-                }
-            }
-        }
+        // const plotChordNotes = (note1, note2, note3, note4 = null) => {
+        //     const pianoContainer = document.querySelector(".main-container");
+        //     for (let i = 0; i < pianoContainer.children.length; i++) {
+        //         if (pianoContainer.children[i].classList.contains(note1) || pianoContainer.children[i].classList.contains(note2) || pianoContainer.children[i].classList.contains(note3) || pianoContainer.children[i].classList.contains(note4)) {
+        //          pianoContainer.children[i].classList.add("active-note");
+        //         } else {
+        //          pianoContainer.children[i].classList.remove("active-note");
+        //         }
+        //     }
+        // }
         plotChordNotes(...chordNotes);
-    }, []);
+    }, [currentChordNote, currentChordModifier]);
 
     return (
         <div className="main-container">

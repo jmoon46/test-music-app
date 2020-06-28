@@ -14,6 +14,7 @@ function App() {
 
   const [currentChordNote, setCurrentChordNote] = useState('C');
   const [currentChordModifier, setCurrentChordModifier] = useState('maj');
+  const [currentChord, setCurrentChord] = useState(null);
 
   return (
     <div className="App">
@@ -36,7 +37,9 @@ function App() {
                 currentChordNote,
                 setCurrentChordNote,
                 currentChordModifier,
-                setCurrentChordModifier
+                setCurrentChordModifier,
+                currentChord,
+                setCurrentChord
               }}>
               <Route exact path="/chord-generator">
                 <h1>Chord Generator</h1>

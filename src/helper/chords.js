@@ -28,7 +28,7 @@ const getSusFourChord = startNote => {
 const getDiminishedChord = startNote => {
   const minorScale = functions.getMinorScale(startNote)["scale"];
   const diminishedChord = [minorScale[0], minorScale[2]];
-  const nextMinorScale = functions.getMinorScale(minorScale[2]);
+  const nextMinorScale = functions.getMinorScale(minorScale[2])["scale"];
   diminishedChord.push(nextMinorScale[2]);
   return diminishedChord;
 }
@@ -36,7 +36,7 @@ const getDiminishedChord = startNote => {
 const getAugmentedChord = startNote => {
   const majorScale = functions.getMajorScale(startNote)["scale"];
   const augmentedChord = [majorScale[0], majorScale[2]];
-  const nextMajorScale = functions.getMajorScale(majorScale[2]);
+  const nextMajorScale = functions.getMajorScale(majorScale[2])["scale"];
   augmentedChord.push(nextMajorScale[2]);
   return augmentedChord;
 }
@@ -71,14 +71,14 @@ const getSevenChord = startNote => {
 
 const getMinorSevenChord = startNote => {
   const minorScale = functions.getMinorScale(startNote)["scale"];
-  const sevenChord = functions.getMinorChord(startNote);
+  const sevenChord = getMinorChord(startNote);
   sevenChord.push(minorScale[6]);
   return sevenChord;
 }
 
 const getMajorSevenChord = startNote => {
   const majorScale = functions.getMajorScale(startNote)["scale"];
-  const sevenChord = functions.getMajorChord(startNote);
+  const sevenChord = getMajorChord(startNote);
   sevenChord.push(majorScale[6]);
   return sevenChord;
 }
