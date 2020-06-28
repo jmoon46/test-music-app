@@ -46,7 +46,7 @@ const ChordsNav = () => {
             <div onClick={handleNoteClick}>
                 {rootNote}
             </div>
-            <div onclick={handleSymbolClick}>
+            <div onClick={handleSymbolClick}>
                 {symbol}
             </div>
             <div onClick={handleModifierClick}>

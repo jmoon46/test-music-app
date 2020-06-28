@@ -6,10 +6,13 @@ import plotChordNotes from "../helper/plotChordNotes"
 
 
 const ChordsWrapper = () => {
-    const { currentChordNote, currentChordModifier } = useContext(ChordContext);
+    const { currentChordNote, currentChordModifier, currentSymbol } = useContext(ChordContext);
 
     let chordNotes;
-    const getCurrentChord = (rootNote, modifier) => {
+    const getCurrentChord = (rootNote, modifier, symbol) => {
+        if (symbol !== "♮") {
+            rootNote += symbol
+        }
         if (modifier === "maj") {
             chordNotes = chordFunctions.getMajorChord(rootNote);
         } else if (modifier === "min") {
@@ -40,70 +43,59 @@ const ChordsWrapper = () => {
 
 
     useEffect(() => {
-        getCurrentChord(currentChordNote, currentChordModifier);
-
-        // const plotChordNotes = (note1, note2, note3, note4 = null) => {
-        //     const pianoContainer = document.querySelector(".main-container");
-        //     for (let i = 0; i < pianoContainer.children.length; i++) {
-        //         if (pianoContainer.children[i].classList.contains(note1) || pianoContainer.children[i].classList.contains(note2) || pianoContainer.children[i].classList.contains(note3) || pianoContainer.children[i].classList.contains(note4)) {
-        //          pianoContainer.children[i].classList.add("active-note");
-        //         } else {
-        //          pianoContainer.children[i].classList.remove("active-note");
-        //         }
-        //     }
-        // }
+        getCurrentChord(currentChordNote, currentChordModifier, currentSymbol);
         plotChordNotes(...chordNotes);
-    }, [currentChordNote, currentChordModifier]);
+    }, [currentChordNote, currentChordModifier, currentSymbol]);
 
     return (
         <div className="main-container">
-            <div className="white-key-1 C B#">
+            <div className="white-key-1 C B# Dbb">
             </div>
-            <div className="black-key C# Db margin-left">
+            <div className="black-key C# Db B## margin-left">
             </div>
-            <div className="white-key D margin-left">
-            </div>
-            <div className="black-key D# Eb margin-left">
-            </div>
-            <div className="white-key E Fb margin-left">
-            </div>
-            <div className="white-key F E# active-note">
-            </div>
-            <div className="black-key F# Gb margin-left active-note">
-            </div>
-            <div className="white-key G margin-left">
-            </div>
-            <div className="black-key G# Ab margin-left">
-            </div>
-            <div className="white-key A margin-left">
-            </div>
-            <div className="black-key A# Bb margin-left">
-            </div>
-            <div className="white-key B Cb margin-left">
-            </div>
-            <div className="white-key-1 C B#">
-            </div>
-            <div className="black-key C# Db margin-left">
-            </div>
-            <div className="white-key D margin-left">
+            <div className="white-key D Ebb C## margin-left">
             </div>
             <div className="black-key D# Eb margin-left">
             </div>
-            <div className="white-key E Fb margin-left">
+            <div className="white-key E Fb D## margin-left">
             </div>
-            <div className="white-key F E# active-note">
+            <div className="white-key F E# Gbb active-note">
             </div>
             <div className="black-key F# Gb margin-left active-note">
             </div>
-            <div className="white-key G margin-left">
+            <div className="white-key G Abb F## margin-left">
             </div>
-            <div className="black-key G# Ab margin-left">
+            <div className="black-key G# Ab F### margin-left">
             </div>
-            <div className="white-key A margin-left">
+            <div className="white-key A Bbb G## margin-left">
             </div>
-            <div className="black-key A# Bb margin-left">
+            <div className="black-key A# Bb Cbb margin-left">
             </div>
-            <div className="white-key B Cb margin-left">
+            <div className="white-key B Cb A## margin-left">
+            </div>
+            <div className="white-key-1 C B# Dbb">
+            </div>
+            <div className="black-key C# Db B## margin-left">
+            </div>
+            <div className="white-key D Ebb C## margin-left">
+            </div>
+            <div className="black-key D# Eb margin-left">
+            </div>
+            <div className="white-key E Fb D## margin-left">
+            </div>
+            <div className="white-key F E# Gbb active-note">
+            </div>
+            <div className="black-key F# Gb margin-left active-note">
+            </div>
+            <div className="white-key G Abb F## margin-left">
+            </div>
+            <div className="black-key G# Ab F### margin-left">
+            </div>
+            <div className="white-key A Bbb G## margin-left">
+            </div>
+            <div className="black-key A# Bb Cbb margin-left">
+            </div>
+            <div className="white-key B Cb A## margin-left">
             </div>
         </div>
     )

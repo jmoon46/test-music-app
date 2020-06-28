@@ -7,11 +7,11 @@ const selectedStyle = {
 };
 
 const ChordSymbol = ({ symbol }) => {
-    const {currentChordSymbol} = useContext(ChordContext);
+    const {currentSymbol} = useContext(ChordContext);
 
     return (
         <div className="key-modifier">
-            <button className="key-button" style={currentChordSymbol === symbol ? selectedStyle : null} value={symbol}>
+            <button className="key-button" style={currentSymbol === symbol ? selectedStyle : null} value={symbol}>
                 {symbol}
             </button>
         </div>
