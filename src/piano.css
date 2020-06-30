@@ -120,4 +120,11 @@ select:focus {
     .active-note {
         font-size: 1em;
     }
+
+    select {
+        width: 100px;
+        height: 30px;
+        padding-left: 30px;
+        font-size: 1em;
+    }
 }

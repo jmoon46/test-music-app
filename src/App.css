@@ -48,9 +48,9 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   width: 90%;
-  max-width: 1400px;
+  max-width: 1000px;
   border-radius: 5px;
-  margin: 10px auto;
+  margin: 15px auto;
   padding: 25px;
   background-color: #330a0a;
   background: rgb(51, 10, 10);
@@ -182,7 +182,7 @@ body {
 @media (max-width: 860px) {
   .nav {
     border-radius: 0px;
-    margin: 0px auto;
+
   }
 
   .scales-wrapper {
@@ -201,6 +201,17 @@ body {
 
   .key-selector {
     margin-bottom: 10px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .key-modifier {
+    width: 40px;
+    height: 40px;
+  }
+
+  .key-button {
+    font-size: 1.4em;
   }
 
   .scales-wrapper {
