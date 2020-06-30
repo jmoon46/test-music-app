@@ -42,7 +42,7 @@ const ChordsNav = () => {
     };
 
     return (
-        <div>
+        <div className="nav">
             <div onClick={handleNoteClick}>
                 {rootNote}
             </div>

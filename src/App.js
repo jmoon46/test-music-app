@@ -20,46 +20,40 @@ function App() {
     <div className="App">
       
         <Router>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Modal Chart</Link>
-              </li>
-              <li>
-                <Link to="/chord-generator">Chords</Link>
-              </li>
-            </ul>
+          <nav className="main-nav">
+            <Link to="/">Modal Chart</Link>
+            <Link to="/chord-generator">Chord Generator</Link>
           </nav>
 
           <Switch>
-            <ChordContext.Provider
-              value = {{
-                currentChordNote,
-                setCurrentChordNote,
-                currentChordModifier,
-                setCurrentChordModifier,
-                currentSymbol,
-                setCurrentSymbol
-              }}>
-              <Route exact path="/chord-generator">
-                <h1>Chord Generator</h1>
-                <ChordsNav />
-                <ChordsWrapper />
-              </Route>
-            </ChordContext.Provider>
-            <KeySigContext.Provider
-              value={{
-                currentNote,
-                setCurrentNote,
-                currentModifier,
-                setCurrentModifier
-              }}>
-              <Route exact path="/">
+            <Route exact path="/">
+              <KeySigContext.Provider
+                value={{
+                  currentNote,
+                  setCurrentNote,
+                  currentModifier,
+                  setCurrentModifier
+                }}>
                 <h1>Modal Interchange</h1>
                 <ModalNav />
                 <ScaleWrapper />
-              </Route>
-            </KeySigContext.Provider>
+              </KeySigContext.Provider>
+            </Route>
+            <Route exact path="/chord-generator">
+              <ChordContext.Provider
+                value = {{
+                  currentChordNote,
+                  setCurrentChordNote,
+                  currentChordModifier,
+                  setCurrentChordModifier,
+                  currentSymbol,
+                  setCurrentSymbol
+                }}>
+                <h1>Chord Generator</h1>
+                <ChordsNav />
+                <ChordsWrapper />
+              </ChordContext.Provider>
+            </Route>
           </Switch>
         </Router>
       <div className="pre-footer"></div>
