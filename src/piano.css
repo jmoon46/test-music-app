@@ -1,3 +1,10 @@
+@media only screen and (max-width: 1430px) {
+    .App .main-container {
+        width: 700px;
+        flex-wrap: wrap;
+    }
+}
+
 html, body {
 	box-sizing: border-box;
 	margin: 0;
@@ -8,10 +15,32 @@ html, body {
 
 
 select {
-    width: 100px;
-    height: 50px;
+    background-color: #802502;
+    color: white;
+    font-size: 1.2em;
+    width: 200px;
+    height: 40px;
+    padding-left: 75px;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 5px;
 }
 
+select:hover {
+    background-color: #a93b11;
+}
+
+select:focus {
+    background-color: #802502;
+}
+
+#chord-type-select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
 
 
 .main-container {
@@ -36,7 +65,7 @@ select {
     width: 60px;
     height: 70%;
     background-color: black;
-    box-shadow: inset 0 0 5px white;
+    box-shadow: inset 0 0 5px white, 0 0 5px black;
     border-radius: 0 0 10px 10px;
 }
 
@@ -56,8 +85,9 @@ select {
 .active-note {
     display: flex;
     flex-direction: column-reverse;
-    background-color: #a91b14;
+    background-color: #90100a;
     padding-bottom: 40px;
     font-size: 1.4em;
     text-align: center;
+    color: white;
 }

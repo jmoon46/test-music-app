@@ -10,9 +10,7 @@ const ChordModifier = ({ modifier }) => {
     const { currentChordModifier } = useContext(ChordContext);
 
     return (
-
         <option value={modifier}>{modifier}</option>
-
     )
 }
 

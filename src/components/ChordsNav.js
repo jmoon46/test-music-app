@@ -45,15 +45,17 @@ const ChordsNav = () => {
 
     return (
         <div className="nav">
-            <div onClick={handleNoteClick}>
+            <div className="key-buttons-wrapper" onClick={handleNoteClick}>
                 {rootNote}
             </div>
-            <div onClick={handleSymbolClick}>
+            <div className="key-buttons-wrapper modifier-buttons-wrapper" onClick={handleSymbolClick}>
                 {symbol}
             </div>
-            <select id="modifiers" onChange={handleModifierChange}>
-                {modifier}
-            </select>
+            <div id="chord-type-select">
+                <select id="modifiers" onChange={handleModifierChange}>
+                    {modifier}
+                </select>
+            </div>
         </div>
     )
 };
