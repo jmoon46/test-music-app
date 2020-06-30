@@ -33,13 +33,15 @@ const ChordsNav = () => {
         }
         setCurrentSymbol(e.target.value);
     }
-    
-    const handleModifierClick = e => {
+
+    const handleModifierChange = e => {
         if (e.target.value === undefined) {
-          return;
+            return;
         }
         setCurrentChordModifier(e.target.value);
-    };
+    }
+    
+
 
     return (
         <div className="nav">
@@ -49,9 +51,9 @@ const ChordsNav = () => {
             <div onClick={handleSymbolClick}>
                 {symbol}
             </div>
-            <div onClick={handleModifierClick}>
+            <select id="modifiers" onChange={handleModifierChange}>
                 {modifier}
-            </div>
+            </select>
         </div>
     )
 };
