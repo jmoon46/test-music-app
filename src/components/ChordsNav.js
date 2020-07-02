@@ -5,7 +5,7 @@ import ChordContext from './ChordContext';
 import ChordSymbol from './ChordSymbol';
 
 const ChordsNav = () => {
-    const { setCurrentChordNote, setCurrentSymbol, setCurrentChordModifier } = useContext(ChordContext);
+    const { setCurrentChordNote, setCurrentSymbol, setCurrentChordModifier, currentChordModifier } = useContext(ChordContext);
 
     const rootNotes = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
     const modifiers = ['maj', 'min', 'sus2', 'sus4', '6', 'maj6', 'min6', '7', 'maj7', 'min7', 'dim', 'aug'];
@@ -52,7 +52,7 @@ const ChordsNav = () => {
                 {symbol}
             </div>
             <div id="chord-type-select">
-                <select id="modifiers" onChange={handleModifierChange}>
+                <select id="modifiers" value={currentChordModifier} onChange={handleModifierChange}>
                     {modifier}
                 </select>
             </div>

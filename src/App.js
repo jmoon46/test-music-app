@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <nav className="main-nav">
             <Link to="/">Modal Chart</Link>
             <Link to="/chord-generator">Chord Generator</Link>
